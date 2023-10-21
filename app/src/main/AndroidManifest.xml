@@ -13,6 +13,17 @@
         android:theme="@style/Theme.QuickChat"
         tools:targetApi="31">
         <activity
+            android:name=".AddContactActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/chat_color_sender" />
+
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
@@ -39,9 +50,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-        <service android:name=".FCMNotificationService" android:exported="false">
+
+        <service
+            android:name=".FCMNotificationService"
+            android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>

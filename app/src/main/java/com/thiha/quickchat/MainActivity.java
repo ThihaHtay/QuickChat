@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     ChatFragment chatFragment;
     ProfileFragment profileFragment;
+    ContactFragment contactFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         chatFragment = new ChatFragment();
         profileFragment = new ProfileFragment();
+        contactFragment = new ContactFragment();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         searchButton = findViewById(R.id.main_search_btn);
@@ -45,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId()==R.id.menu_profile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,profileFragment).commit();
                 }
+                if(item.getItemId()==R.id.menu_contact){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,contactFragment).commit();
+                }
+
+
                 return true;
             }
         });

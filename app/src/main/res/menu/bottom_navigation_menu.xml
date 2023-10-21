@@ -8,4 +8,11 @@
         android:icon="@drawable/person_icon"
         android:id="@+id/menu_profile"
         />
+    <item android:title="Contact"
+        android:icon="@drawable/contact_icon"
+        android:id="@+id/menu_contact"
+        />
+
+
+
 </menu>
